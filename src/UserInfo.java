@@ -41,19 +41,22 @@ public class UserInfo {
         this.isActive = isActive;
     }
 
-
-
-
+    public void displayInfo() {
+        System.out.println("User name: " + name);
+        System.out.println("User age: " + age);
+        System.out.println("User email address: " + email);
+        System.out.println("Is the user active: " + isActive);
+    }
 
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        UserInfo firstUser = new UserInfo("Yaqeen", 20, "alayaqeen282@gmail.com", true);
+        System.out.println("First user data: ");
+        firstUser.displayInfo();
+        UserInfo secondUser = new UserInfo("Sarah", 22, "sarah@gmail.com", true);
+        System.out.println("\nSecond user data: ");
+        secondUser.displayInfo();
+        UserInfo thirdUser = new UserInfo("Saleh", 18, "salah2006@gmail.com", false);
+        System.out.println("\nThird user data: ");
+        thirdUser.displayInfo();
     }
 }
