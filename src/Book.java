@@ -36,8 +36,16 @@ public class Book {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getPages() {
+        return pages;
+    }
+
+    public boolean getIsAvailable() {
+        return isAvailable;
     }
 
 
